@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História de Amor ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Para o Meu Amor, Júlio Vinícius</h1>
+        <h2>Uma linha do tempo do nosso amor</h2>
+        
+        <p id="contador-dias">Aguardando a contagem...</p>
+        
+    </header>
+
+    <main>
+        <section id="historia">
+            <h2>Nossa História ❤️</h2>
+            <p>
+                Tudo começou em agosto de 2024, quando nos conhecemos por causa das fotos. E de uma simples mensagem para enviar as fotos, passamos a conversar todos os dias despertando sentimentos em nós dois.
+            </p>
+            <p>
+                Com o tempo, percebemos que éramos feitos um para o outro. Cada dia ao seu lado é uma nova aventura e um novo motivo para sorrir. Cada momento com você se torna uma memória especial, tem amor que chega e vira lar, e você é esse amor.
+            </p>
+            <p>
+                Desde então, criamos tantas memórias incríveis e mal posso esperar por todas as que ainda virão. Você é o meu presente, meu futuro e a melhor parte do meu dia. Feliz um ano meu amor. Amo você!
+            </p>
+        </section>
+
+        <section id="galeria">
+            <h2>Nossos Momentos ✨</h2>
+            <div class="fotos-grid">
+                <div><img src="./foto1.jpeg" alt="Nossa foto 1"></div>
+                <div><img src="./foto2.jpeg" alt="Nossa foto 2"></div>
+                <div><img src="./foto3.jpeg" alt="Nossa foto 3"></div>
+                <div><img src="./foto4.jpeg" alt="Nossa foto 4"></div>
+                <div><img src="./foto5.jpeg" alt="Nossa foto 5"></div>
+                <div><img src="./foto6.jpeg" alt="Nossa foto 6"></div>
+                <div><img src="./foto7.jpeg" alt="Nossa foto 7"></div>
+                <div><img src="./foto8.jpeg" alt="Nossa foto 8"></div>
+                <div><img src="./foto9.jpeg" alt="Nossa foto 9"></div>
+                <div><img src="./foto10.jpeg" alt="Nossa foto 10"></div>
+                <div><img src="./foto11.jpeg" alt="Nossa foto 11"></div>
+                <div><img src="./foto12.jpeg" alt="Nossa foto 12"></div>
+                <div><img src="./foto13.jpeg" alt="Nossa foto 13"></div>
+                <div><img src="./foto14.jpeg" alt="Nossa foto 14"></div>
+                <div><img src="./foto15.jpeg" alt="Nossa foto 15"></div>
+                <div><img src="./foto16.jpeg" alt="Nossa foto 16"></div>
+                <div><img src="./foto17.jpeg" alt="Nossa foto 17"></div>
+                <div><img src="./foto18.jpeg" alt="Nossa foto 18"></div>
+                <div><img src="./foto19.jpeg" alt="Nossa foto 19"></div>
+                <div><img src="./foto20.jpeg" alt="Nossa foto 20"></div>
+                <div><img src="./foto21.jpeg" alt="Nossa foto 21"></div>
+                <div><img src="./foto22.jpeg" alt="Nossa foto 22"></div>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito com todo meu amor por você ❤️</p>
+    </footer>
+
+    <script>
+        // 🚨 MUDE ESTA DATA PARA O DIA EXATO EM QUE COMEÇARAM A NAMORAR (Ano-Mês-Dia)
+        const dataInicio = new Date("2024-05-15"); 
+
+        const umDiaEmMilissegundos = 1000 * 60 * 60 * 24; 
+
+        function atualizarContador() {
+            const dataAtual = new Date();
+            const diferencaTempo = dataAtual.getTime() - dataInicio.getTime();
+            const diferencaDias = Math.floor(diferencaTempo / umDiaEmMilissegundos);
+
+            const elementoContador = document.getElementById("contador-dias");
+
+            if (elementoContador) {
+                elementoContador.innerHTML = `Estamos juntos há **${diferencaDias}** dias!`;
+            }
+        }
+
+        atualizarContador();
+        // Atualiza a cada hora
+        setInterval(atualizarContador, 1000 * 60 * 60); 
+    </script>
+
+</body>
+</html>
